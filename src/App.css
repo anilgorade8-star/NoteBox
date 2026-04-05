@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", "Segoe UI", cursive;
+}
+
+body {
+  background: #fdf6e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+h3 {
+  margin-top: 30px;
+  font-size: 28px;
+  color: #5a4b3c;
+}
+
+/* Inputs */
+#task,
+#details {
+  width: 90%;
+  max-width: 500px;
+  margin: 10px 0;
+  padding: 12px;
+  border: 2px dashed #c8b6a6;
+  outline: none;
+  background-color: #fffaf0;
+  color: #5a4b3c;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+#task:focus,
+#details:focus {
+  border-color: #a67c52;
+  background-color: #fff;
+}
+
+/* Button */
+#btn {
+  width: 90%;
+  max-width: 500px;
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+  background: #a67c52;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 2px 3px 0 #7a5c3d;
+  transition: 0.2s;
+}
+
+#btn:hover {
+  transform: rotate(-1deg) scale(1.02);
+}
+
+#btn:active {
+  transform: scale(0.95);
+  box-shadow: 1px 1px 0 #7a5c3d;
+}
+
+/* Notes Container */
+.notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+  width: 90%;
+  margin-top: 20px;
+}
+
+/* Note Card with Image */
+.box {
+  background-color: #e3d0bc;
+  width: 230px;
+  min-height: 150px;
+  /* instead of fixed height */
+  padding: 15px;
+  position: relative;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+/* Random feel (optional classes you can assign in JS) */
+.box:nth-child(odd) {
+  transform: rotate(2deg);
+}
+
+.box:hover {
+  transform: scale(1.05) rotate(0deg);
+}
+
+/* Note Text */
+.note {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #3e2f1c;
+  font-size: 16px;
+}
+
+/* Delete Button */
+.delete {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d9534f;
+  color: white;
+  border-radius: 20px;
+  width: 70%;
+  height: 30px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #a94442;
+}
+
+.delete:hover {
+  background-color: #c9302c;
+}
+
+.delete:active {
+  transform: translateX(-50%) scale(0.9);
+}
